@@ -53,4 +53,4 @@ def send_email(name, email, choice, rating, commets):
         server.login(sender_email, password)
         server.sendmail(
            sender_email, receiver_email, message.as_string()
-#         )
+        )
