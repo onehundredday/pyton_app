@@ -13,41 +13,39 @@
         <!-- to do message here -->
         <form action="/submit" method="POST">
             <div class="form-group">
-            <h3>Customer name</h3>
+            <h3>Sizning Ismingiz</h3>
             <input type="text"
             name="name"
-            placeholder="Name of vihicle">
+            placeholder="FIO">
         </div>
         <div class="form-group">
-            <h3>Enter email</h3>
+            <h3>EMAIL ingizni kiriting</h3>
             <input type="text"
             name="email"
-            placeholder="Name of vihicle">
+            placeholder="@email">
         </div>
         <div class="form-group">
-            <h3>Dealer</h3>
+            <h3>Siz Programminga qiziqasizmi?</h3>
             <select name="choice">
                 <option value="">
                     Select Dealer
                 </option>
-                <option value="Tohir Sodiq">
-                    Tohir Sodiq
+                <option value="HA">
+                    HA
                 </option>
-                <option value="Karim Soqiq">
-                    Karim Soqiq
+                <option value="Yo'q">
+                    Yo'q
                 </option>
             </select>
         </div>
         <div class="form-group"> 
-            <h3>Please rate your dealer</h3>
-            <input type="radio" name="rating" value="1"> 1
-            <input type="radio" name="rating" value="2"> 2
-            <input type="radio" name="rating" value="3"> 3
-            <input type="radio" name="rating" value="4"> 4
-            <input type="radio" name="rating" value="5" checked> 5
+            <h3>Qasyi tilda dasturlashni o'rganish sizga qulay</h3>
+            <input type="radio" name="rating" value="1"> Uzbek
+            <input type="radio" name="rating" value="2"> English
+            <input type="radio" name="rating" value="3" checked> Russian
         </div>
         <div class="form-group">
-            <textarea name="comments" id="" cols="30" rows="10" placeholder="Tell us what you like and/or did not like"></textarea>
+            <textarea name="comments" id="" cols="30" rows="10" placeholder="Fikr va mulohaza bildiring! Oldindan Raxmat"></textarea>
         </div>
         <input type="submit" value="submit" class="btn"/>
         </form>
