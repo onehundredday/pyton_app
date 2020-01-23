@@ -45,7 +45,7 @@ def submit():
         comments  = request.form['comments']
         #print(name, email, choice, rating, commets)
         if name == '' or choice == '':
-            return render_template('index.html', message = 'Please enter required fields')
+            return render_template('index.html', message = 'Iltimos malumotlarni toliq kiriting')
         #if db.session.query(Feedback).filter(Feedback.name == name).count == 0: # IT MEAN USER NOT IN DB
         data = Feedback(name, email, choice, rating, comments)
         db.session.add(data)

@@ -10,7 +10,9 @@
 <body>
     <div class="container">
         <img src="../static/Artboard – 7.png" alt="reklama" class="logo">
-        <!-- to do message here -->
+        {% if message %}
+      <p class="message">{{ message | safe }}</p>
+      {% endif %}
         <form action="/submit" method="POST">
             <div class="form-group">
             <h3>Sizning Ismingiz</h3>
@@ -42,7 +44,7 @@
             <h3>Qasyi tilda dasturlashni o'rganish sizga qulay</h3>
             <input type="radio" name="rating" value="1"> Uzbek
             <input type="radio" name="rating" value="2"> English
-            <input type="radio" name="rating" value="3" checked> Russian
+            <input type="radio" name="rating" value="3"> Russian
         </div>
         <div class="form-group">
             <textarea name="comments" id="" cols="30" rows="10" placeholder="Fikr va mulohaza bildiring! Oldindan Raxmat"></textarea>
