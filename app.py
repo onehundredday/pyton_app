@@ -4,12 +4,12 @@ from send_email import send_email
 
 app = Flask(__name__)
 
-ENV = 'dev'
+ENV = 'prod'
 if ENV == 'dev':
   app.debug = True
   app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:123456@localhost/pythonDB'
 else:
-   app.config['SQLALCHEMY_DATABASE_URI'] = '' 
+   app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://anhesdrarhxtak:8bd8798063a033daf37e59ceff36734157dab7a5e388e9bb7475db209ac995db@ec2-54-247-178-166.eu-west-1.compute.amazonaws.com:5432/d67mvg8v16v0it' 
    app.debug = False
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -24,12 +24,12 @@ class Feedback(db.Model):
     rating = db.Column(db.Integer)
     comments = db.Column(db.Text())
 
-    def __init__(self, name, email, choice, rating, comments):
-        self.name = name
-        self.email = email
-        self.choice = choice
-        self.rating = rating
-        self.comments = comments
+    # def __init__(self, name, email, choice, rating, comments):
+    #     self.name = name
+    #     self.email = email
+    #     self.choice = choice
+    #     self.rating = rating
+    #     self.comments = comments
 
 
 @app.route('/')
