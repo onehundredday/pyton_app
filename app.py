@@ -24,12 +24,12 @@ class Feedback(db.Model):
     rating = db.Column(db.Integer)
     comments = db.Column(db.Text())
 
-    # def __init__(self, name, email, choice, rating, comments):
-    #     self.name = name
-    #     self.email = email
-    #     self.choice = choice
-    #     self.rating = rating
-    #     self.comments = comments
+    def __init__(self, name, email, choice, rating, comments):
+        self.name = name
+        self.email = email
+        self.choice = choice
+        self.rating = rating
+        self.comments = comments
 
 
 @app.route('/')
